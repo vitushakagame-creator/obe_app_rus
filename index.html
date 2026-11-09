@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; form-action https://duckduckgo.com; base-uri 'none'">
+<title>Новая вкладка</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(ellipse at 16% 12%, #e3f5f1, transparent 53%), #f3f6fb;
+    color: #15273b;
+    font: 16px/1.55 "Segoe UI", sans-serif;
+  }
+  main {
+    width: min(680px, calc(100% - 36px));
+    margin: 32px 0;
+    padding: clamp(26px, 7vw, 62px);
+    border: 1px solid #dbe5ee;
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 22px 70px #1d385016;
+  }
+  .mark {
+    display: inline-grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border-radius: 14px;
+    background: #152b3e;
+    color: #a6f2dc;
+    font-size: 25px;
+    font-weight: 750;
+  }
+  h1 { margin: 18px 0 5px; font-size: clamp(32px, 6vw, 48px); line-height: 1.12; }
+  p { margin: 0 0 27px; color: #445b72; }
+  form { display: flex; flex-wrap: wrap; gap: 8px; }
+  input, button, a { font: inherit; }
+  input {
+    min-width: 170px;
+    flex: 1;
+    padding: 11px 14px;
+    border: 1px solid #92a7b8;
+    border-radius: 10px;
+    color: #15273b;
+  }
+  button {
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 10px;
+    background: #16624f;
+    color: white;
+    cursor: pointer;
+    font-weight: 650;
+  }
+  nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 23px; }
+  a {
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: #eff4f8;
+    color: #264963;
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: 3px solid #168d78; outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <span class="mark" aria-hidden="true">O</span>
+  <h1>OBI Browser</h1>
+  <p>Введи адрес сайта в верхнюю строку или начни с поиска.</p>
+  <form action="https://duckduckgo.com/" method="get">
+    <input type="search" name="q" placeholder="Что ищем?" aria-label="Поиск в интернете" required>
+    <button type="submit">Поиск</button>
+  </form>
+  <nav aria-label="Быстрые ссылки">
+    <a href="https://ru.wikipedia.org/">Википедия</a>
+    <a href="https://www.youtube.com/">YouTube</a>
+    <a href="https://github.com/">GitHub</a>
+  </nav>
+</main>
+</body>
+</html>
